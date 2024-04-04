@@ -1,0 +1,168 @@
+.header,
+.header * {
+  box-sizing: border-box;
+}
+.header {
+  position: relative;
+}
+.rectangle-34 {
+  background: #ffffff;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #c7e4f4;
+  border-width: 0px 5px 15px 1px;
+  width: 1353px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 20px 100px 0px rgba(2, 162, 231, 0.25);
+}
+.logo {
+  width: 271px;
+  height: 58px;
+  position: static;
+}
+.learn-plus {
+  color: #005072;
+  text-align: left;
+  font-family: "AlegreyaSans-Bold", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  position: absolute;
+  left: 67px;
+  top: 24px;
+}
+.pesan {
+    width: 46px;
+  height: 28px;
+    position: absolute;
+    right: 15%;
+    left: 85%;
+    top: 29px;
+    overflow: visible;
+}
+.notif {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: 89%;
+  right: 11%;
+  top: 26px;
+  overflow: visible;
+}
+.userpf {
+  width: 60px;
+  height: 100px;
+  position: absolute;
+  right: 7%;
+  left: 93%;
+  bottom: 16.82%;
+  top: -10px;
+  /* margin-right: 10px; */
+  overflow: visible;
+}
+
+.menu,
+.menu * {
+  box-sizing: border-box;
+}
+.menu {
+  position: relative;
+}
+.rectangle-36 {
+  background: #0b87bc;
+  border-radius: 25px;
+  width: 300px;
+  height: 798px;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mnDashboard{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "AlegreyaSans-Bold", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    background: transparent;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    top: 90px;
+    /* background: #0b87bc; */
+    position: absolute;
+    left: 22px;
+}
+.mnClass{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "AlegreyaSans-Bold", sans-serif;
+    font-weight: 600;
+    color: #0b87bc;
+    text-align: center;
+    background: #ffffff;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    top: 150px;
+    /* background: #0b87bc; */
+    position: absolute;
+    left: 22px;
+}
+.mnCalendar{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "AlegreyaSans-Bold", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    background: transparent;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    top: 210px;
+    /* background: #0b87bc; */
+    position: absolute;
+    left: 22px;
+}
+.mnPemberitahuan{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "AlegreyaSans-Bold", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    background: transparent;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    top: 270px;
+    /* background: #0b87bc; */
+    position: absolute;
+    left: 22px;
+}
+.mnSettings{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "AlegreyaSans-Bold", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    background: transparent;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    top: 330px;
+    /* background: #0b87bc; */
+    position: absolute;
+    left: 22px;
+}
