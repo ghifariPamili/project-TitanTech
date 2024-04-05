@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas</title>
+    <link rel="stylesheet" href="class.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="menu-1">
+                <div class="logoWeb">
+                    <a href="#">StudyPlus.</a>
+                </div>
+                <div class="rightMenu">
+                    <div class="isi">
+                        <form class="search">
+                            <span class="search-icon material-symbols-outlined">search</span>
+                            <input class="search-input" type="text" placeholder="Cari Keperluanmu" name="search">
+                          </form>
+                    </div>
+                    <div class="isi">
+                        <div class="logo">
+                            <a href="#">
+                                <span class="material-symbols-rounded">
+                                person
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="isi">
+                        <div class="logo">
+                            <a href="#">
+                                <span class="material-symbols-rounded">
+                                    settings
+                                    </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-2">
+                <div class="leftMenu">
+                    <a href="#">Dashboard</a>
+                    <a href="#" class="active">Kelas</a>
+                    <a href="#">Lainnya</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="content">
+        <div class="sideMenu">
+            <a href="#" class="active">
+                List Mata Pelajaran
+            </a>
+            <a href="#" class="materi">
+                Materi
+            </a>
+            <a href="#" class="absensi">
+                Absensi
+            </a>
+            <a href="#" class="quiz">
+                Quiz
+            </a>
+            <a href="#" class="tugas">
+                Tugas
+            </a>
+            
+        </div>
+    </section>
+    
+<script>
+    window.onscroll = function() {
+        var navbar = document.querySelector('.navbar');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    };
+</script>
+</body>
+</html>

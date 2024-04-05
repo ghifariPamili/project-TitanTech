@@ -82,6 +82,7 @@
 }
 
 .mnDashboard{
+    
     padding: 10px;
     font-size: 20px;
     font-family: "AlegreyaSans-Bold", sans-serif;
@@ -97,6 +98,10 @@
     /* background: #0b87bc; */
     position: absolute;
     left: 22px;
+}
+.mnDashboard a{
+  text-decoration: none;
+  color: #ffffff;
 }
 .mnClass{
     padding: 10px;
