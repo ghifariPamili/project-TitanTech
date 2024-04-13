@@ -1,5 +1,7 @@
 
-
+header{
+    /* position: fixed; */
+}
 .navbar{
     /* margin-top: 10px; */
     position: fixed;
@@ -49,8 +51,8 @@
 
 .material-symbols-rounded{
     padding: 6px;
-    background-color: #f0f0f0;
-    color: rgb(39, 39, 39);
+    /* background-color: #f0f0f0; */
+    color: rgb(48, 48, 48);
     border-radius: 10px;
 }
 
@@ -111,13 +113,13 @@
 }
 
 .sideMenu{
-    top: 80px;
+    /* top: 80px; */
     position: relative;
     font-family: 'lexend', sans-serif;
     width: max-content;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-left: 12px;
     width: 220px;
     height: 310px;
@@ -138,7 +140,7 @@
     /* background-color: #f0f0f0; */
     margin-top: 10px;
     text-decoration: none;
-    color: #0f0f0f;
+    color: #6f6d6d;
     font-size: 17px;
 }
 /* 
@@ -146,14 +148,70 @@
     background-color: red;
 } */
 .sideMenu a:hover{
-    background-color: #c5c5c5;
+    background-color: #f3f1f1;
 }
 .sideMenu .active{
     background-color: #0b87bc !important;
     color: white !important;
-    letter-spacing: px;
-    font-weight: 700;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 body{
+    display: flex;
+    flex-direction: column;
     height: 10000px;
+}
+.content{
+    display: flex;
+    position: relative;
+    top: 100px;
+}
+
+.list-kelas {
+    display: flex;
+    flex-direction: row;
+    gap:  40px;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    height: 2000px;
+    width: 100%; 
+}
+
+
+.kotak1 {
+    background-color: #FFFAFA;
+    height: 150px;
+    width: 210px ;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:  0px;
+    border-bottom-right-radius:  0px;
+    margin: 20px 50px 10px 30px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.kotak1 .gambar1{
+    height: 100px;
+    width: 210px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.kotak1 .guru1{
+    width: 47.826px;
+    height: 50px;
+    margin-left: 150px;
+    top: -200px;
+
+}
+
+.kotak2{
+    
+}
+
+.kotak3{
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

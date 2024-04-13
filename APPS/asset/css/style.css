@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+
+body.homepage {
+    background: url("/APPS/asset/img/bg.png") no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+    background-position: top;
+    color: #ededed;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    background-color: #0B87BC;
+    margin-top: 40px;
+    margin-right: 60px;
+    text-align: center;
+    padding: 14px;
+    height: 50px;
+    width: 120px;
+    border-radius: 14px;
+}
+
+.navbar a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #ededed;
+}
+
+img {
+    background: transparent;
+    height: 70px;
+    margin: 0;
+    padding: 5px;
+    float: left;
+    
+}
+.garis{
+    position: relative;
+    color: black;
+    margin: 0;
+    top: -30px;
+    font-size: 90px;
+    font-weight: 1;
+}
+.panduan{
+        margin-top: 21px;
+
+        display: flex;
+        justify-content: space-between;
+
+    
+}
+.panduan a{
+    margin-left: 12px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.logo-name{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.logo-name a{
+    text-decoration: none;
+    color: black;
+}
+.logo-name.plus{
+    text-decoration: none;
+    color: white;
+}
+
+.home{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 10%;
+    
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 820px;
+    margin-left: -60px;
+}
+
+.home-content h1{
+    font-size: 37px;
+    margin-bottom: 12px;
+}
+.home-content p {
+    width: 540px;
+    margin-top: 8px; 
+    margin-bottom: 10px;
+}
+
+.btn-box{
+    margin-top: 24px;
+    padding: 14px;
+    width: 230px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #0B87BC;
+}
+.btn-box a{
+    text-decoration: none;
+    color: #ededed;
+}
