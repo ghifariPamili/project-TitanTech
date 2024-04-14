@@ -10,7 +10,7 @@ body{
     align-items: center;
     margin-right: 20px;
     min-height: 100vh;
-    background: url('bg.png') no-repeat;
+    background: url('/APPS/asset/img/bg.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
