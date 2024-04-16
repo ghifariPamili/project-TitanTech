@@ -59,8 +59,89 @@ header{
     color: #171717;
 }
 
+/* ===================== Dropdown ===================== */
 
-/* =================   isi content    ========= */
+
+.action{
+    /* position: fixed; */
+    top: 20px;
+    right: 30px;
+
+}
+
+.action .profile{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.action .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.action .menuDrop{
+    position: absolute;
+    top: 70px;
+    right: -10px;
+    padding: 10px 20px;
+    background: #000000;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.action .menuDrop.active{
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 10000;
+}
+
+.action .menuDrop::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 56px;
+    width: 20px;
+    height: 20px;
+    background: #0f0909;
+    transform: rotate(45deg);
+    z-index: 10000;
+}
+
+.action .menuDrop ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action .menuDrop ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menuDrop ul li:hover a{
+    color: #02aef8;
+}
+
+
+/* =================   isi content    ================== */
 
 .container {
     display: grid;
@@ -71,25 +152,46 @@ header{
     grid-template-rows: auto auto; 
     gap: 10px;
     margin: 0 13px;
+    z-index: 1;
+    /* height: 100vh; */
 }
 
 .content {
     display: flex;
     gap: 10px;
     flex-direction: row;
+    flex: 1;
 }
 
-/* ================= sideMenu ================= */
+/* =================        sideMenu        ================= */
 .sideMenu{
     border-radius: 10px;
-    flex: 0 0 auto; 
+    /* flex: 0 0 auto;  */
+    width: 300px;
     display: flex;
     flex-direction: column;
     background-color: #0B87BC;
-    padding: 10px 0;
+    padding: 15px 0;
     row-gap: 10px;
+    height: 328px;
+    /* overflow-y: auto; */
 }
-.sideMenu a{
+
+.sideMenu .active{
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    /* padding: 10px; */
+    color: #fbf3f3;
+    background-color: #126c93;
+}
+
+
+
+
+.sideMenu .sidemn{
+    font-weight: 600;
+    width: 170px;
     text-decoration: none;
     color: #f7f7f7;
     display: flex;
@@ -97,6 +199,35 @@ header{
     gap: 10px;
     padding: 10px;
 
+}
+
+.sideMenu .sidemn:hover{
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    /* padding: 10px; */
+    color: #0B87BC;
+    background-color: #f7f7f7;
+}
+
+.sideMenu .sideLogout{
+    font-weight: 600;
+    width: 170px;
+    text-decoration: none;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+.sideMenu .sideLogout:hover{
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    /* padding: 10px; */
+    color: #fdfefe;
+    background-color: #e10d0d;
 }
 
 .sideMenu i{
@@ -111,26 +242,141 @@ header{
     border-radius: 15px;
     background: var(--color-gray-10, #FFF);
     padding: 10px;
-    flex: 1; 
+    /* flex: 1;  */
+    z-index: 1;
 }
 
-.list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
-    grid-template-rows: repeat(auto-fit, minmax(200px, 250px));
-    gap: 15px;
-}
-
-.main .matpel{
-    background-color: red;
-    height: 90px;
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
     padding: 30px;
     
-
 }
 
-@media (min-width: 765px) and (max-width: 1024px) {
-    .list {
-           grid-template-rows: repeat(3, 1fr);
-       }
-   }
+.matpel {
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.matpel:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fefefe;
+    backface-visibility: hidden;
+    border-radius: 19px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    color: #0B87BC;
+}
+
+.back p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.back h3{
+    margin: 0 0 10px 0;
+}
+
+.matpel img {
+    width: 250px;
+    height: 110px;
+    margin-bottom: 30px;
+    border-radius: 19px;
+}
+
+.title {
+    position: absolute;
+    bottom: 5px;
+    left: 0.1px;
+    padding: 10px;
+    color: #0B87BC;
+    font-family: "Istok Web";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* header main  */
+
+.titlePage{
+    display:flex;
+    justify-content: space-between;
+    margin: 14px 2px 2px 2px;
+}
+
+.titlePage h2{
+    color:#0B87BC;
+}
+
+.search{
+    --padding: 14px;
+    margin-right: 15px;
+    width: max-content;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+    /* border: #333333 solid 2px; */
+    transition: box-shadow 0.25s;
+}
+.search:focus-within{
+    box-shadow: 0 0 5px #066b96;
+}
+.search-input {
+    font-size: 13px;
+    font-family: 'lexend', sans-serif;
+    color: #100f0f;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search-input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-icon{
+    color: #0B87BC;
+    cursor: pointer;
+}
+
+
+/* animasi  */
+
