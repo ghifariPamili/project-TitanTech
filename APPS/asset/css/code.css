@@ -79,6 +79,7 @@ header{
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    z-index: 100;
 
 }
 
@@ -370,6 +371,7 @@ header{
     display:flex;
     justify-content: space-between;
     margin: 14px 2px 2px 2px;
+    z-index: -100;
 }
 
 .titlePage h2{
