@@ -9,7 +9,7 @@ body{
     background-color: #f7f7f7;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    overflow: hidden;
 }
 
 /* ============================ header ======================== */
@@ -17,7 +17,7 @@ header{
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 6px 7px 30px #C7E4F4;
-    z-index: 101;
+    z-index: 1;
 }
 
 
@@ -65,7 +65,8 @@ header{
 /* ======== dropdown notif ============== */
 
 .action-notif {
-    position: relative;
+    top: 20px;
+    right: 30px;
 }
 
 .menuDrop-notif {
@@ -80,7 +81,14 @@ header{
     display: none;
     z-index: 101;
 }
-.action-notif .menuDrop-notif::before{
+.menuDrop-notif .active{
+    top: 91px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 10000;
+    overflow: hidden;
+}
+.menuDrop-notif::before{
     content: "";
     position: absolute;
     top: -5px;
@@ -115,11 +123,6 @@ header{
 
 
 
-.menuDrop-notif.active {
-    display: block;
-}
-
-
 
 /* ======== dropdown profile ============== */
 
@@ -137,7 +140,7 @@ header{
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
-
+    z-index: 100;
 }
 
 .action .user{
@@ -146,33 +149,34 @@ header{
     left: 0;
 }
 
-.action .menuDrop{
+.menuDrop{
     position: absolute;
-    top: 70px;
-    right: -10px;
+    top: 80px;
+    right: 25px;
     padding: 10px 20px;
-    background: #fff;
-    width: 150px;
-    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    background: #ffffff;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
 }
 
-.action .menuDrop.active{
-    top: 80px;
+.menuDrop.active{
+    top: 91px;
     visibility: visible;
     opacity: 1;
     z-index: 10000;
 }
 
-.action .menuDrop::before{
+.menuDrop::before{
     content: "";
     position: absolute;
     top: -5px;
-    right: 56px;
+    right: 34px;
     width: 20px;
     height: 20px;
     background: #ffffff;
@@ -180,7 +184,7 @@ header{
     z-index: 10000;
 }
 
-.action .menuDrop ul li{
+.menuDrop ul li{
     list-style: none;
     padding: 10px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -189,7 +193,7 @@ header{
     justify-content: center;
 }
 
-.action .menuDrop ul li a{
+.menuDrop ul li a{
     display: inline-block;
     text-decoration: none;
     color: #555;
@@ -197,12 +201,15 @@ header{
     transition: 0.5s;
 }
 
-li a{
-    display: flex;
-    justify-content: center;
+.menuDrop ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
 }
 
-.action .menuDrop ul li:hover a{
+.menuDrop ul li:hover a{
     color: #02aef8;
 }
 
@@ -226,6 +233,7 @@ li a{
     display: flex;
     gap: 10px;
     flex-direction: row;
+    justify-content: space-between;
     flex: 1;
 }
 
@@ -308,16 +316,220 @@ li a{
 
 
 /* ======================== Main =================== */
+
+.container-main{
+    display: flex;
+    gap: 10px;
+}
+
 .main{
     border-radius: 15px;
     background: var(--color-gray-10, #FFF);
     padding: 10px;
     /* flex: 1;  */
     z-index: 1;
+    
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px;
+
+}
+/* =========== right menu ================ */
+
+.rightMenu{
+    border-radius:15px;
+    padding: 0;
+    align-items: flex-end;
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 102;
+}
+
+.rightMenu .absensi{
+    border-radius: 10px;
+    width: 250px;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.rightMenu .history{
+    border-radius: 10px;
+    width: 250px;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ========= history =========== */
+
+.history{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 5px;
+}
+.history .title .t{
+    color: #0B87BC;
+    font-weight: 600;
+    font-size: 17px;
+}
+.history .title .s{
+    font-size: 12px;
+}
+.history .list-history{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+    padding: 10px 0;
+    height: auto;
+    background-color: #fff;
+}
+
+.list-history .historyItem{
+    background-color: rgba(217, 217, 217, 0.36);
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+
+}
+.historyItem .status-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.historyItem .status-box p{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.historyItem .isi{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+.historyItem .isi p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.historyItem .isi .name{
+    color: #0B87BC;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.status-box .selesai{
+    color: rgb(42, 226, 42);
+}
+.status-box .proses{
+    color: rgb(19, 152, 213);
 }
 
 
 
 
+/* =========== absensi =========== */
+
+
+.absensi .title{
+    /* font-size: 15px; */
+    padding: 2px 5px;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.absensi .title .t{
+    color: #0B87BC;
+    font-weight: 600;
+    font-size: 17px ;
+}
+.absensi .title .s{
+    color: #555;
+    font-size: 13px ;
+}
+
+.absensi .list-absensi{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+    padding: 10px 0;
+    height: auto;
+    background-color: #fff;
+}
+
+.list-absensi .absensiItem{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.absensiItem li{
+    color:#0B87BC;
+    font-size: 16px;
+    font-weight: 600;
+}
+.absensiItem .waktu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin:0 0 0 20px;
+}
+
+.absensiItem .isi p{
+    margin:0 0 0 22px;
+    font-size: 13px;
+}
+
+.absensiItem .jam{
+    font-size: 13px;
+}
+
+.absensiItem .selesai{
+    font-size: 13px;
+    color:rgb(22, 219, 22);
+}
+.absensiItem .terlambat{
+    font-size: 13px;
+    color:rgb(241, 16, 16);
+}
+
 /* animasi  */
 
+
+
+
+
+
+
+/* ==== dummy ==== */
+
+.dummy{
+    background-color: black;
+    height: 100px;
+    width:200px;
+}

@@ -20,6 +20,63 @@
   />
 </head>
 <body>
+  <!-- == menuDrop notifikasi == -->
+  <div class="menuDrop-notif">
+    <ul>
+        <li>
+            <div class="notifList">
+                <img src="/APPS/asset/img/notif-komentar.png" alt="#">
+                <div class="isi-notif">
+                    <p class="isi">
+                        <b>ibu selena</b> mengomentari tugas kamu
+                    </p>
+                    <p class="time">3 menit yang lalu</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="notifList">
+                <img src="/APPS/asset/img/notif-berhasil.png" alt="#">
+                <div class="isi-notif">
+                    <p class="isi">
+                        anda telah mengumpulkan tugas matematika
+                    </p>
+                    <p class="time">10 menit yang lalu</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="notifList">
+                <img src="/APPS/asset/img/notif-komentar.png" alt="#">
+                <div class="isi-notif">
+                    <p class="isi">
+                        <b>ibu joko</b> mengomentari tugas kamu
+                    </p>
+                    <p class="time">Kemarin</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="notifList">
+                <img src="/APPS/asset/img/notif-materiDitambahkan.png" alt="#">
+                <div class="isi-notif">
+                    <p class="isi">
+                        materi Matematika baru saja ditambahkan
+                    </p>
+                    <p class="time">23 feb</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- == menuDrop profile == -->
+<div class="menuDrop">
+  <ul>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Setting</a></li>
+      <li><a href="#">LogOut</a></li>
+  </ul>
+</div>
   <div class="container">
     <header  class="header animate__animated animate__fadeInDown">
       <nav class="navbar ">
@@ -38,54 +95,7 @@
                     <i class='bx bx-bell'></i>
                 </span>
             </div>
-            <div class="menuDrop-notif">
-                <ul>
-                    <li>
-                        <div class="notifList">
-                            <img src="/APPS/asset/img/notif-komentar.png" alt="#">
-                            <div class="isi-notif">
-                                <p class="isi">
-                                    <b>ibu selena</b> mengomentari tugas kamu
-                                </p>
-                                <p class="time">3 menit yang lalu</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="notifList">
-                            <img src="/APPS/asset/img/notif-berhasil.png" alt="#">
-                            <div class="isi-notif">
-                                <p class="isi">
-                                    anda telah mengumpulkan tugas matematika
-                                </p>
-                                <p class="time">10 menit yang lalu</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="notifList">
-                            <img src="/APPS/asset/img/notif-komentar.png" alt="#">
-                            <div class="isi-notif">
-                                <p class="isi">
-                                    <b>ibu joko</b> mengomentari tugas kamu
-                                </p>
-                                <p class="time">Kemarin</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="notifList">
-                            <img src="/APPS/asset/img/notif-materiDitambahkan.png" alt="#">
-                            <div class="isi-notif">
-                                <p class="isi">
-                                    materi Matematika baru saja ditambahkan
-                                </p>
-                                <p class="time">23 feb</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            
         </div>
           <div class="action">
             <div class="profile" onclick="menuToggle();">
@@ -105,46 +115,130 @@
               </svg>
             </span> 
             </div>
-            <div class="menuDrop">
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Setting</a></li>
-                    <li><a href="#">LogOut</a></li>
-                </ul>
-            </div>
+            
         </div>
         </div>
       </nav>
     </header>
     <section class="content">
-      <div class="sideMenu animate__animated animate__fadeInLeft">
-        <a href="#" class="sidemn">
-          <i class='bx bxs-grid-alt' ></i>
-          Dasbor
-        </a>
-        <a href="#" class="active">
-          <i class='bx bx-book'></i>
-          Kelas
-        </a>
-        <a href="#" class="sidemn">
-          <i class='bx bxs-calendar' ></i>
-          Kalender
-        </a>
-        <a href="#" class="sidemn">
-          <i class='bx bxs-megaphone'></i>
-          Pemberitahuan
-        </a>
-        <a href="#" class="sidemn">
-          <i class='bx bxs-cog'></i>
-          settings
-        </a>
-        <a href="#" class="sideLogout">
-          <i class='bx bx-log-out'></i>
-          LogOut
-        </a>
-      </div>
-      <div class="main animate__animated animate__fadeInRight">
-        
+        <div class="container-main">
+          <div class="sideMenu animate__animated animate__fadeInLeft">
+            <a href="#" class="sidemn">
+              <i class='bx bxs-grid-alt' ></i>
+              Dasbor
+            </a>
+            <a href="#" class="active">
+              <i class='bx bx-book'></i>
+              Kelas
+            </a>
+            <a href="#" class="sidemn">
+              <i class='bx bxs-calendar' ></i>
+              Kalender
+            </a>
+            <a href="#" class="sidemn">
+              <i class='bx bxs-megaphone'></i>
+              Pemberitahuan
+            </a>
+            <a href="#" class="sidemn">
+              <i class='bx bxs-cog'></i>
+              settings
+            </a>
+            <a href="#" class="sideLogout">
+              <i class='bx bx-log-out'></i>
+              LogOut
+            </a>
+          </div>
+          <div class="main">
+            <div class="list">
+              <div class="dummy"></div>
+            <div class="dummy"></div>
+            <div class="dummy"></div>
+            </div>
+          </div>
+        </div>
+      <div class="rightMenu">
+        <div class="absensi">
+          <div class="title">
+            <p class="t">Absensi</p>
+            <p class="s">see all</p>
+          </div>
+          <div class="list-absensi">
+            <div class="absensiItem">
+              <div class="isi">
+                <li>Absensi hari ini</li>
+                <p>matematika</p>
+              </div>
+              <div class="waktu">
+                <p class="jam">12.00</p>
+                <p class="status selesai">selesai</p>
+              </div>
+            </div>
+            <div class="absensiItem">
+              <div class="isi">
+                <li>Absensi hari ini</li>
+                <p>matematika</p>
+              </div>
+              <div class="waktu">
+                <p class="jam">12.00</p>
+                <p class="status terlambat">terlambat</p>
+              </div>
+            </div>
+            <div class="absensiItem">
+              <div class="isi">
+                <li>Absensi hari ini</li>
+                <p>matematika</p>
+              </div>
+              <div class="waktu">
+                <p class="jam">12.00</p>
+                <p class="status selesai">selesai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="history">
+          <div class="title">
+            <p class="t">Histori bacaan</p>
+            <p class="s">See all</p>
+          </div>
+          <div class="list-history">
+            <div class="historyItem">
+              <div class="isi">
+                <p class="name">Matematika</p>
+                <p >materi 2</p>
+              </div>
+              <div class="status-box">
+                <p class="status selesai">selesai</p>
+              </div>
+            </div>
+            <div class="historyItem">
+              <div class="isi">
+                <p class="name">Matematika</p>
+                <p >materi 2</p>
+              </div>
+              <div class="status-box">
+                <p class="status proses">Proses</p>
+              </div>
+            </div>
+            <div class="historyItem">
+              <div class="isi">
+                <p class="name">Matematika</p>
+                <p >materi 2</p>
+              </div>
+              <div class="status-box">
+                <p class="status selesai">selesai</p>
+              </div>
+            </div>
+            <div class="historyItem">
+              <div class="isi">
+                <p class="name">Matematika</p>
+                <p >materi 2</p>
+              </div>
+              <div class="status-box">
+                <p class="status proses">Proses</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
