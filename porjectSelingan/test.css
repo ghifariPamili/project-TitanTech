@@ -4,9 +4,11 @@ body{
 
 .main {
     border-radius: 15px;
+    position: absolute;
     background: var(--color-gray-10, #FFF);
     padding: 10px;
-    flex: 1; 
+    flex: 1;
+    z-index: -1; 
 }
 
 .list {
@@ -16,13 +18,13 @@ body{
     gap: 10px;
     padding: 30px;
     padding: 30px 30px 30px 100px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .matpel {
     width: 250px;
     height: 150px;
-    perspective: 1000px;
+    /* perspective: 1000px; */
     position: relative;
     z-index: 1;
    
@@ -34,7 +36,7 @@ body{
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    z-index: 1;
+    z-index: -1;
 }
 
 .matpel:hover .inner {
@@ -56,7 +58,7 @@ body{
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: -1;
 }
 
 .back {
@@ -66,7 +68,7 @@ body{
     justify-content: center;
     transform: rotateY(180deg);
     color: #0B87BC;
-    z-index: 1;
+    z-index: -1;
 }
 
 .back p {
@@ -157,13 +159,14 @@ body{
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
-    z-index: 1000;
+    z-index: 4;
 }
 
 .action .menu.active{
     top: 70px;
     visibility: visible;
     opacity: 1;
+    z-index: 4;
 }
 
 .action .menu::before{
@@ -184,6 +187,7 @@ body{
     direction: flex;
     align-items: center;
     justify-content: center;
+    z-index: 4;
 }
 
 .action .menu ul li a{
@@ -192,6 +196,7 @@ body{
     color: #555;
     font-weight: 500;
     transition: 0.5s;
+    z-index: 4;
 }
 
 .action .menu ul li:hover a{

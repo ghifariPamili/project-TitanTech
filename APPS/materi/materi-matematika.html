@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tambah Kelas</title>
+  <title>Matematika</title>
   <!-- link css  -->
-  <link rel="stylesheet" href="/APPS/asset/css/code.css">
+  <link rel="stylesheet" href="/APPS/asset/css/materi-matematika.css">
   
   <!-- link icon  -->
   
@@ -20,40 +20,6 @@
   />
 </head>
 <body>
-
-  <div class="overlay">
-    <div class="form-container">
-      <div class="header-form">
-        <div class="title-input"></div>
-      <div class="close">
-        <button><i class='bx bx-x'></i></button>
-      </div>
-      </div>
-      <div class="inputCode">
-        <div class="greet">Selamat Datang, <br>
-          Moh Ghifari Pamili</div>
-        <img src="/APPS/asset/img/vector add code.png" alt="">
-        <p>Saat ini anda belum memiliki kelas untuk anda akses. <br>
-          silahkan masukan kode kelas yang telah diberikan guru anda</p>
-    <!-- Form untuk memasukkan kode kelas -->
-      <form>
-        <label for="kode-kelas"></label>
-        <input type="text" id="kode-kelas" name="kode-kelas">
-        <a href="/APPS/kelas.html" class="button">Masuk</a>
-      </form>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="menuDrop">
-    <ul>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Setting</a></li>
-        <li><a href="#">LogOut</a></li>
-    </ul>
-</div>
   <div class="container">
     <header  class="header animate__animated animate__fadeInDown">
       <nav class="navbar ">
@@ -66,11 +32,61 @@
               <i class='bx bx-envelope' ></i>
             </span>
           </a>
-          <a href="#">
-            <span class="icon notif">
-              <i class='bx bx-bell' ></i>
-            </span>
-          </a>
+          <div class="action-notif">
+            <div class="notifikasi" onclick="toggleNotifikasi();">
+                <span class="icon notif">
+                    <i class='bx bx-bell'></i>
+                </span>
+            </div>
+            <div class="menuDrop-notif">
+                <ul>
+                    <li>
+                        <div class="notifList">
+                            <img src="/APPS/asset/img/notif-komentar.png" alt="#">
+                            <div class="isi-notif">
+                                <p class="isi">
+                                    <b>ibu selena</b> mengomentari tugas kamu
+                                </p>
+                                <p class="time">3 menit yang lalu</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notifList">
+                            <img src="/APPS/asset/img/notif-berhasil.png" alt="#">
+                            <div class="isi-notif">
+                                <p class="isi">
+                                    anda telah mengumpulkan tugas matematika
+                                </p>
+                                <p class="time">10 menit yang lalu</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notifList">
+                            <img src="/APPS/asset/img/notif-komentar.png" alt="#">
+                            <div class="isi-notif">
+                                <p class="isi">
+                                    <b>ibu joko</b> mengomentari tugas kamu
+                                </p>
+                                <p class="time">Kemarin</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notifList">
+                            <img src="/APPS/asset/img/notif-materiDitambahkan.png" alt="#">
+                            <div class="isi-notif">
+                                <p class="isi">
+                                    materi Matematika baru saja ditambahkan
+                                </p>
+                                <p class="time">23 feb</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
           <div class="action">
             <div class="profile" onclick="menuToggle();">
                <span class="icon user">
@@ -89,7 +105,13 @@
               </svg>
             </span> 
             </div>
-            
+            <div class="menuDrop">
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#">LogOut</a></li>
+                </ul>
+            </div>
         </div>
         </div>
       </nav>
@@ -122,67 +144,7 @@
         </a>
       </div>
       <div class="main animate__animated animate__fadeInRight">
-        <div class="titlePage">
-          <h2>Kelas</h2>
-          <form class="search">
-            <input class="search-input" type="text" placeholder="Cari Kelas" name="search">
-            <span class="search-icon material-symbols-outlined">search</span>
-          </form>
-        </div>
-        <div class="list ">
-          <a href="#" class="matpel">
-            <div class="inner">
-                <div class="back">
-                  <i class='bx bx-plus'></i>
-                    <!-- <img src="#" alt="tambahkan"> -->
-                    <p >silahkan tambahkan kode kelas</p>
-                </div>
-                <div class="front">
-                    <h3>Kosong</h3>
-                    <p class="tambah">anda belum memasukan kode kelas anda, silahkan  tekan menu ini untuk dapat mengisi kode kelas</p>
-                </div>
-            </div>
-          </a>
-          <a href="#" class="matpel">
-            <div class="inner">
-                <div class="back">
-                  <i class='bx bx-plus'></i>
-                    <!-- <img src="#" alt="tambahkan"> -->
-                    <p >silahkan tambahkan kode kelas</p>
-                </div>
-                <div class="front">
-                    <h3>Kosong</h3>
-                    <p class="tambah">anda belum memasukan kode kelas anda, silahkan  tekan menu ini untuk dapat mengisi kode kelas</p>
-                </div>
-            </div>
-          </a>
-          <a href="#" class="matpel">
-            <div class="inner">
-                <div class="back">
-                  <i class='bx bx-plus'></i>
-                    <!-- <img src="#" alt="tambahkan"> -->
-                    <p >silahkan tambahkan kode kelas</p>
-                </div>
-                <div class="front">
-                    <h3>Kosong</h3>
-                    <p class="tambah">anda belum memasukan kode kelas anda, silahkan  tekan menu ini untuk dapat mengisi kode kelas</p>
-                </div>
-            </div>
-          </a>
-          <a href="#" class="matpel">
-            <div class="inner">
-                <div class="back">
-                  <i class='bx bx-plus'></i>
-                    <!-- <img src="#" alt="tambahkan"> -->
-                    <p >silahkan tambahkan kode kelas</p>
-                </div>
-                <div class="front">
-                    <h3>Kosong</h3>
-                    <p class="tambah">anda belum memasukan kode kelas anda, silahkan  tekan menu ini untuk dapat mengisi kode kelas</p>
-                </div>
-            </div>
-          </a>
-        </div>
+        
       </div>
     </section>
   </div>
@@ -193,6 +155,13 @@
         toggleMenu.classList.toggle('active')
     }
 </script>
-  <script src="/APPS/asset/js/code.js"></script>
+  <script>
+    function toggleNotifikasi() {
+      const menuNotifikasi = document.querySelector('.menuDrop-notif');
+      menuNotifikasi.classList.toggle('active');
+  }
+  
+</script>
+  <script src="/APPS/asset/js/kelas.js"></script>
 </body>
 </html>

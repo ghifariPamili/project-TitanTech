@@ -44,18 +44,3 @@ window.onclick = function(event) {
         }
     }
 }
-
-
-// ====== overlay js ========
-
-// JavaScript
-// const matpel = document.querySelector('.matpel');
-// const overlay = document.querySelector('.overlay');
-
-// matpel.addEventListener('click', () => {
-//     matpel.classList.add('active');
-// });
-
-// overlay.addEventListener('click', () => {
-//     matpel.classList.remove('active');
-// });
