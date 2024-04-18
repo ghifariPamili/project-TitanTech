@@ -9,7 +9,7 @@ body{
     background-color: #f7f7f7;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* ============================ header ======================== */
@@ -299,6 +299,7 @@ header{
     padding: 10px;
 
 }
+
 .sideMenu .sideLogout:hover{
     font-weight: 600;
     border-radius: 10px;
@@ -323,22 +324,210 @@ header{
 }
 
 .main{
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     background: var(--color-gray-10, #FFF);
     padding: 10px;
     /* flex: 1;  */
     z-index: 1;
+    gap: 20px;
+    /* background-color: black; */
+}
+
+.main .header-materi{
+    display: flex;
+    
+    gap: 30px;
+}
+
+.main .header-materi img{
+    border-radius: 40px 0 0 0;
+    width: 200px;
+    height: 200px;
+}
+
+.main .header-materi .intro-materi{
+    margin: 30px 30px 0 0;
+}
+
+.main .header-materi .intro-materi p{
+    font-size: 14px;
+}
+
+.main .content-materi{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .content-materi .atas{
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7F3F3;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.list-materi {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content-materi .atas .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.main .content-materi .atas .gambar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 35px;
+    border-radius: 10px;
+    background-color: #D3FFCC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .content-materi .atas .gambar2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 35px;
+    border-radius: 10px;
+    background-color: #e98888;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .content-materi .atas .gambar3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 35px;
+    border-radius: 10px;
+    background-color: #a4ebed;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ======== button ======== */
+.main .content-materi .atas .tombol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.main .content-materi .atas .tombol2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.tombol .download{
+    font-size: 15PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background-color: #2525AD;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 97px;
+}
+.tombol2 .download{
+    font-size: 15PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background-color: #BABABA;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 97px;
+}
+
+.materi .materi2 .materi3 .tombol{
+    color: #171717;
+}
+
+.tombol .dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: #2525AD;
+    border:#2525AD solid 3px ;
+}
+.tombol2 .dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: #BABABA;
+    border:#BABABA solid 3px ;
+}
+/* ===== bawah ====== */
+
+.main .content-materi .bawah{
+    background-color: F7F3F3;
+    display: block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .content-materi .bawah2{
+    background-color: F7F3F3;
+    display: none;
+    visibility: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .content-materi .materi .materi1 .bawah{
+    background-color: F7F3F3;
+    display: block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.main .content-materi .bawah .quiz{
+    display: flex;
+    height: 90px;
+    justify-content:flex-start;
+    margin: 0px 10px 20px 80px;
     
 }
-
-.list{
+.bawah .quiz .link-quiz{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 30px;
-
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+    margin: 0 30px 0 40px;
+    /* background-color: #0B87BC; */
 }
+.bawah .quiz .a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bawah .quiz .link-quiz .p {
+    content: "";
+    background-color: red;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    width: 9px;
+    height: 30px;
+    z-index: 8;
+}
+.bawah .quiz .link-quiz a{
+    text-decoration: none;
+}
+
+
+
+.rotate {
+    transform: rotate(180deg);
+  }
 /* =========== right menu ================ */
 
 .rightMenu{
@@ -349,7 +538,7 @@ header{
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 10px;
     z-index: 102;
 }
@@ -361,6 +550,7 @@ header{
     background-color: #ffffff;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .rightMenu .history{
     border-radius: 10px;
     width: 250px;
