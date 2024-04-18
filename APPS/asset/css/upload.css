@@ -1,0 +1,30 @@
+input {
+    display: none;
+}
+ion-icon:hover{
+    color: grey;
+}
+
+body{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+    min-height: 100vh;
+    background: blue;
+    /* background-size: cover;
+    background-position: center; */
+}
+
+.container {
+    width: 400px;
+    background:white;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.container upload {
+    width: 100%;
+    padding: 40px;
+}
