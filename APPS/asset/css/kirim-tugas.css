@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* ============================ header ======================== */
+header{
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 6px 7px 30px #C7E4F4;
+    z-index: 101;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 15px 5px 5px;
+    padding: 5px;
+}
+.navbar a{
+    /* color: #f2f2f2; */
+    color: #096992;
+    text-decoration: none;
+}
+
+.navbar .logo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: "Share Tech Mono", monospace; */
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4em;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon{
+    color: #0B87BC;
+}
+.icon .bx-envelope{
+    font-size: 24px;
+}
+.icon .bx-bell{
+    font-size: 24px;
+}
+
+.icon .bx-user-circle{
+    color: #171717;
+}
+
+/* ===================== Dropdown ===================== */
+
+/* ======== dropdown notif ============== */
+
+.action-notif {
+    position: relative;
+}
+
+.menuDrop-notif {
+    position: absolute;
+    top: calc(100% + 40px);
+    right: -55px;
+    width: fit-content; /* Atur lebar dropdown */
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* transition: 0.5s; */
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: none;
+    z-index: 101;
+}
+.action-notif .menuDrop-notif::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 56px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.menuDrop-notif .notifList{
+    margin: 15px 4px 10px 9px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menuDrop-notif ul li{
+    list-style: none;
+}
+
+.menuDrop-notif .notifList .isi{
+    color: #545252;
+    font-size: 16px;
+}
+.menuDrop-notif .notifList .time{
+    color: #b6b6b6;
+    font-size: 16px;
+}
+
+
+
+.menuDrop-notif.active {
+    display: block;
+}
+
+
+
+/* ======== dropdown profile ============== */
+
+.action{
+    /* position: fixed; */
+    top: 20px;
+    right: 30px;
+
+}
+
+.action .profile{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.action .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.action .menuDrop{
+    position: absolute;
+    top: 70px;
+    right: -10px;
+    padding: 10px 20px;
+    background: #fff;
+    width: 150px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.action .menuDrop.active{
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 10000;
+}
+
+.action .menuDrop::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 56px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    z-index: 10000;
+}
+
+.action .menuDrop ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action .menuDrop ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+li a{
+    display: flex;
+    justify-content: center;
+}
+
+.action .menuDrop ul li:hover a{
+    color: #02aef8;
+}
+
+
+/* =================   isi content    ================== */
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto; 
+    gap: 10px;
+    margin: 0 13px;
+    z-index: 1;
+    /* height: 100vh; */
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex: 1;
+}
+
+/* =================        sideMenu        ================= */
+.sideMenu{
+    border-radius: 10px;
+    /* flex: 0 0 auto;  */
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0B87BC;
+    padding: 15px 0;
+    row-gap: 10px;
+    height: 328px;
+    /* overflow-y: auto; */
+}
+
+.sideMenu .active{
+    width: 170px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 10px;
+    color: #0B87BC;
+    background-color: #f7f7f7;
+}
+
+
+
+
+.sideMenu .sidemn{
+    font-weight: 600;
+    width: 170px;
+    text-decoration: none;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.sideMenu .sidemn:hover{
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    /* padding: 10px; */
+    color: #fbf3f3;
+    background-color: #126c93;
+}
+
+.sideMenu .sideLogout{
+    font-weight: 600;
+    width: 170px;
+    text-decoration: none;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+.sideMenu .sideLogout:hover{
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 5px;
+    /* padding: 10px; */
+    color: #fdfefe;
+    background-color: #e10d0d;
+}
+
+.sideMenu i{
+    /* padding: 9px 0 0 0; */
+    align-items: center;
+    font-size: 1.5em;
+}
+
+
+/* ======================== Main =================== */
+.main{
+    border-radius: 15px;
+    background: var(--color-gray-10, #FFF);
+    padding: 10px;
+    /* flex: 1;  */
+    z-index: 1;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px;
+    
+}
+
+.matpel {
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.matpel:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fefefe;
+    backface-visibility: hidden;
+    border-radius: 19px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    color: #0B87BC;
+}
+
+.back p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.back h3{
+    margin: 0 0 10px 0;
+}
+
+.matpel img {
+    width: 250px;
+    height: 110px;
+    margin-bottom: 30px;
+    border-radius: 19px;
+}
+
+.title {
+    position: absolute;
+    bottom: 5px;
+    left: 0.1px;
+    padding: 10px;
+    color: #0B87BC;
+    font-family: "Istok Web";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* header main  */
+
+.titlePage{
+    display:flex;
+    justify-content: space-between;
+    margin: 2px 2px 2px 2px;
+}
+
+.titlePage h2{
+    color:#0B87BC;
+}
+
+.search{
+    --padding: 14px;
+    margin: 0 10px 0 0;
+    width: max-content;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+    /* border: #333333 solid 2px; */
+    transition: box-shadow 0.25s;
+}
+.search:focus-within{
+    box-shadow: 0 0 5px #066b96;
+}
+.search-input {
+    font-size: 13px;
+    font-family: 'lexend', sans-serif;
+    color: #100f0f;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search-input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-icon{
+    color: #0B87BC;
+    cursor: pointer;
+}
+/* ====== kalender ======== */
+
+
+
+/* animasi  */
+

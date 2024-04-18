@@ -13,9 +13,11 @@ body{
     background: url('/APPS/asset/img/bg.png') no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .wrapper {
+    margin: 10px 40px;
     width: 400px;
     background: white;
     color: black;
